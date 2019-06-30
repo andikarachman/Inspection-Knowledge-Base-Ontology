@@ -1,0 +1,2003 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#"
+     xml:base="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesAssessment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesAssessment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesCorrectiveAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesCorrectiveAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesRecommendation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesRecommendation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionRank -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionRank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasDefectType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasDefectType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasEffectivenessRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasEffectivenessRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFinding -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFinding">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionEffectiveness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionEffectiveness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationRank -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationRank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#isLocatedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#usesTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#usesTechnique">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFindingDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFindingDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasImage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasImage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionCoverageArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionCoverageArea">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspector -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInsulationRemoved -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInsulationRemoved">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasWorkOrderNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasWorkOrderNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ACSCCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ACSCCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AmineCrackingInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AmineCrackingInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CLSCCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CLSCCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUICLSCCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUICLSCCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUIInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUIInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CausticCrackingInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CausticCrackingInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveAction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionRank"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasCorrectiveActionDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalCLSCCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalCLSCCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalCorrosionInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalCorrosionInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalDamageInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralThinningInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralThinningInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThinningInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HIC_SOHIC_H2SCracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HIC_SOHIC_H2SCracking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HIC_SOHIC_HFCracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HIC_SOHIC_HFCracking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HSC_HFCracking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HSC_HFCracking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionEffectiveness"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionActivity"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFinding"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#usesTechnique"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#generatesAssessment"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionObject"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#isLocatedAt"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionCoverageArea"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspectionDate"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspector"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInsulationRemoved"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasWorkOrderNumber"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasEffectivenessRating"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasDefectType"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasFindingDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationRank"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasRecommendationDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Instrumentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Instrumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LocalThinningInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LocalThinningInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThinningInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PTACrackingInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PTACrackingInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#hasInspection"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselHead -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselHead">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselOtherComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselOtherComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselShell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselShell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVessel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SSCInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SSCInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SCCInspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThinningInspectionEffectiveness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThinningInspectionEffectiveness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectiveness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AccousticEmissionTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AccousticEmissionTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AssociatedPiping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AssociatedPiping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AttachmentWeld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AttachmentWeld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#BottomSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#BottomSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUIInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CUIInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CircumferentialLongitudinalWeld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CircumferentialLongitudinalWeld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CloseVisualInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CloseVisualInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Coating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Coating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Crack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Crack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Distortion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Distortion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EarthingStrap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EarthingStrap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EddyCurrentTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EddyCurrentTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Erosion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Erosion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FairlyEffective -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FairlyEffective">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FieldMetallographicReplication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FieldMetallographicReplication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FireFightingEquipment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FireFightingEquipment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Fireproofing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Fireproofing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixEventually -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixEventually">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInDays -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInDays">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInMonths -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInMonths">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInWeeks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInWeeks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixToday -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixToday">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CorrectiveActionRank"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RecommendationRank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FlangeValveAndAssociatedHardware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FlangeValveAndAssociatedHardware">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Foundation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Foundation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Fracture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Fracture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralCorrosion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralCorrosion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Guywire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Guywire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HardnessMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HardnessMeasurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Head -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Head">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HighlyEffective -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#HighlyEffective">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Ineffective -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Ineffective">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InfraredThermography -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InfraredThermography">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRestriction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRestriction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InsulationSupport_VacuumRing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InsulationSupport_VacuumRing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Insulation_Cladding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Insulation_Cladding">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InternalInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InternalInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InternalSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InternalSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Ladder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Ladder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LevelIndicatingInstrument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LevelIndicatingInstrument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Instrumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LightningRod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LightningRod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LiquidPenetrantTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LiquidPenetrantTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MagneticParticleTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MagneticParticleTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Manway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Manway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MiddleSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MiddleSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nameplate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nameplate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NorthernSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NorthernSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nozzle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nozzle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OperatorSurveillance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OperatorSurveillance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Other -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Other">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PipeSupport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PipeSupport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PitGauge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PitGauge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PittingCorrosion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PittingCorrosion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PlatformAndHandrail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PlatformAndHandrail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PoorlyEffective -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PoorlyEffective">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureIndicatingInstrument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureIndicatingInstrument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Instrumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureTesting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureTesting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RadiographicTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#RadiographicTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SafetyValveAndAssociatedPiping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SafetyValveAndAssociatedPiping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Shell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Shell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SmallPipingConnection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SmallPipingConnection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SouthernSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#SouthernSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Stairway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Stairway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AuxiliaryComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TemperatureIndicatingInstrument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TemperatureIndicatingInstrument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Instrumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThicknessInspection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ThicknessInspection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TopSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TopSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TransitionCone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#TransitionCone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UltrasonicScanMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UltrasonicScanMeasurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UltrasonicSpotMeasurement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UltrasonicSpotMeasurement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionTechnique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Unacceptable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Unacceptable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UsuallyEffective -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#UsuallyEffective">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionEffectivenessRating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_EasternHead -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_EasternHead">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselHead"/>
+        <hasInspection rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_EasternShell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_EasternShell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselShell"/>
+        <hasInspection rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_OtherComponents -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_OtherComponents">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselOtherComponents"/>
+        <hasInspection rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_OtherComponents_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_WesternHead -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_WesternHead">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselHead"/>
+        <hasInspection rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_WesternShell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#V2264A_WesternShell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureVesselShell"/>
+        <hasInspection rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Wear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Wear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#DefectType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Weephole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Weephole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#VesselSection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#CircumferentialLongitudinalWeld"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circumferential and longitudinal welds of vessel where easily seen appeared in good condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EarthingStrap_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EarthingStrap_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EarthingStrap"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EarthingStrap_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EarthingStrap_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earth strap associated with the vessel was in good condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#AttachmentWeld"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attachment welds were in good condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Coating"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associated protective coating or paint of eastern half of the vessel was in sound condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_ExternalCorrosion_IE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_ExternalCorrosion_IE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#ExternalCorrosionInspectionEffectiveness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IA"/>
+        <hasInspectionEffectiveness rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_ExternalCorrosion_IE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Head"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternHead_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel eastern dome end was in satisfactory condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Manway"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel eastern-half manway was in satisfactory condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nozzle"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel eastern-half nozzles was in satisfactory condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternAttachmentWelds_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternCoating_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternManway_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternNozzle_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Shell"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternShell_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel eastern-half shell was in satisfactory condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <generatesRecommendation rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IR"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Skirt/SupportLeg/Saddle"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralCorrosion"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel was securely mounted via its support legs or saddles (east &amp; west sides) onto two overhead main stand-alone mounting concrete plinths. The vessel saddles weld attachments and all tie-down bolts where sighted on the eastern side were intact and in sound condition, western side was fully lagged in fire proofing materials. The base-plates of both saddles (east &amp; west side) to the mounting plates on concrete plinths displayed early stage of surface corrosion activity along the lip region of both plates (top &amp; bottom) contact areas. Surface corrosion activity appeared on both sides of each saddle plate to base-plate lip region contact areas.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EasternSupportLegsSaddles_IR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+        <hasRecommendationRank rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInMonths"/>
+        <hasRecommendationDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blast &amp; re-coat vessel saddle base plate-plinths outer lip region surface corrosion.</hasRecommendationDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FireFightingEquipment"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel fire deluge system that was installed over the entire vessel was well in tack and in sound condition. Associated components of the system such as pipe spools, pipe flanges, bolts &amp; nuts were sighted in good and secure condition with no signs of leaking gasket detected. Fire deluge system guy wires were also in good and secure condition.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LevelIndicatingInstrument"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associated instrument indicators of LI gauge and associated valve fittings were in sound condition. All pipe-work and associated valve fitting were in sound condition, most pipe-work had just been recently been recoated.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Nameplate"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#EasternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel data nameplate and vessel equipment ID tag number label were attached vessel.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_OtherComponents_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_OtherComponents_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_EarthingStrap_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_FireDelugeSystem_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_LIGauge_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_Nameplate_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <generatesRecommendation rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IR"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#PressureIndicatingInstrument"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#NotApplicable"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associated instrument indicators of PI gauge and associated valve fittings were in sound condition, apart from rust staining appearing on the PI glass cover lower areas. All pipe-work and associated valve fitting were in sound condition, most pipe-work had just been recently been recoated.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_PIGauge_IR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+        <hasRecommendationRank rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInMonths"/>
+        <hasRecommendationDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service or replace PI (next to first landing platform).</hasRecommendationDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Fireproofing"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternFireproofing_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fireproofing material was intact and in good condition apart from old mechanical damaged scratch marks which had been repaired visible near on the top-side of vessel.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Head"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternHead_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The western half of vessel dome-end was fully insulated or coated in fireproofing material.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Inspection"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_CircLongWelds_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IA"/>
+        <hasInspectionActivity rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Shell"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternShell_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#None"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The western half of vessel shell was fully insulated or coated in fireproofing material.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionActivity"/>
+        <generatesAssessment rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Acceptable"/>
+        <generatesRecommendation rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IR"/>
+        <hasFinding rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IF"/>
+        <hasInspectionObject rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Skirt/SupportLeg/Saddle"/>
+        <hasInspectionType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#OnStreamInspection"/>
+        <isLocatedAt rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#WesternSection"/>
+        <usesTechnique rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralVisualInspection"/>
+        <hasInspectionCoverageArea rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</hasInspectionCoverageArea>
+        <hasInspectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-02T00:00:00</hasInspectionDate>
+        <hasInspector rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Boski</hasInspector>
+        <hasInsulationRemoved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasInsulationRemoved>
+        <hasWorkOrderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9866128</hasWorkOrderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionFinding"/>
+        <hasDefectType rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#GeneralCorrosion"/>
+        <hasFindingDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vessel was securely mounted via its support legs or saddles (east &amp; west sides) onto two overhead main stand-alone mounting concrete plinths. The vessel saddles weld attachments and all tie-down bolts where sighted on the eastern side were intact and in sound condition, western side was fully lagged in fire proofing materials. The base-plates of both saddles (east &amp; west side) to the mounting plates on concrete plinths displayed early stage of surface corrosion activity along the lip region of both plates (top &amp; bottom) contact areas. Surface corrosion activity appeared on both sides of each saddle plate to base-plate lip region contact areas.</hasFindingDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#082012_V2264A_WesternSupportLegsSaddles_IR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#InspectionRecommendation"/>
+        <hasRecommendationRank rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#FixInMonths"/>
+        <hasRecommendationDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blast &amp; re-coat vessel saddle base plate-plinths outer lip region surface corrosion.</hasRecommendationDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LiftingLug/Trunion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#LiftingLug/Trunion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Skirt/SupportLeg/Saddle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#Skirt/SupportLeg/Saddle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andikarachman/ontologies/2018/7/inspection-knowledge-base-ontology#MainVessel"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
